@@ -1,0 +1,27 @@
+### Register
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "email" : "test@test.com",
+    "password":"password123",
+    "username":"testuser"
+}
+
+
+### Login
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "email" : "test@test.com",
+    "password":"password123"
+}
+
+### Protected route without Token
+GET http://localhost:5000/api/debates/protected
+
+
+### Protected route with Token
+GET http://localhost:5000/api/debates/protected
+Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjbXBxdzBzcHkwMDAweXhoaXVkZXN2dTV2IiwiaWF0IjoxNzgwMDU3Mjg2LCJleHAiOjE3ODA2NjIwODZ9.1PvtVQU1b6CNBao-L4Dj7vnpssX9XJrBQ7EjUWp4COI
