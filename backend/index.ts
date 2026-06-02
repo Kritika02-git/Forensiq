@@ -17,6 +17,8 @@ const PORT = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 
+console.log('API KEY:', process.env.ANTHROPIC_API_KEY)
+
 app.use('/api/debates',debateRoute);
 app.use('/api/auth',authRouter)
 
