@@ -1,6 +1,6 @@
 import { Router, Response } from 'express';
 import {authenticate, AuthRequest} from "../middleware/auth.middleware";
-import {sendArgument, startDebate} from "../controllers/debate.controller";
+import {analyseDebate, sendArgument, startDebate} from "../controllers/debate.controller";
 
 const router = Router();
 
@@ -20,6 +20,10 @@ router.post('/argue', authenticate, async (req, res) => {
     console.log('argue route hit')
     console.log('body:', req.body)
    await sendArgument(req as AuthRequest, res)
+})
+
+router.post('/analyse', authenticate, async (req, res) => {
+    await analyseDebate(req as AuthRequest, res)
 })
 
 export default router;

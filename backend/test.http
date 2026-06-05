@@ -29,7 +29,7 @@ Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjbXBxdz
 ### Start Debate
 POST http://localhost:5000/api/debates/start
 Content-Type: application/json
-Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjbXBxdzBzcHkwMDAweXhoaXVkZXN2dTV2IiwiaWF0IjoxNzgwMzIwMDcxLCJleHAiOjE3ODA5MjQ4NzF9.qKgw0_gJjy73zeSlOKB2-R46LqN_gW_Zlfm2_Klp7sY
+Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjbXBxdzBzcHkwMDAweXhoaXVkZXN2dTV2IiwiaWF0IjoxNzgwNjM5MTE4LCJleHAiOjE3ODEyNDM5MTh9.f0T0uN4fNUSI_pawDyL3sBSD-L9kjJUwJFriYuCOKqE
 
 {
   "topic": "Social media does more harm than good",
@@ -40,9 +40,19 @@ Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjbXBxdz
 ### Send Argument
 POST http://localhost:5000/api/debates/argue
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjbXBxdzBzcHkwMDAweXhoaXVkZXN2dTV2IiwiaWF0IjoxNzgwMzIwMDcxLCJleHAiOjE3ODA5MjQ4NzF9.qKgw0_gJjy73zeSlOKB2-R46LqN_gW_Zlfm2_Klp7sY
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjbXBxdzBzcHkwMDAweXhoaXVkZXN2dTV2IiwiaWF0IjoxNzgwNjM5MTE4LCJleHAiOjE3ODEyNDM5MTh9.f0T0uN4fNUSI_pawDyL3sBSD-L9kjJUwJFriYuCOKqE
 
 {
-  "sessionId":"cmpv8mxsp0003545zy9mi9lyq",
+  "sessionId":"cmq0im8600001flexy6pn5kwt",
   "argument": "Social media has proven to increase anxiety and depression especially in teenagers"
+}
+
+
+### Analyse Debate
+POST http://localhost:5000/api/debates/analyse
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjbXBxdzBzcHkwMDAweXhoaXVkZXN2dTV2IiwiaWF0IjoxNzgwNjM5MTE4LCJleHAiOjE3ODEyNDM5MTh9.f0T0uN4fNUSI_pawDyL3sBSD-L9kjJUwJFriYuCOKqE
+
+{
+    "sessionId":"cmq0im8600001flexy6pn5kwt"
 }
